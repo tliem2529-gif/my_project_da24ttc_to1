@@ -1,1 +1,16 @@
-﻿
+﻿body {
+  background-color: lightgreen;
+}
+body {
+  color: white;
+}
+body {
+  text-shadow: 2px 2px 5px black;
+  text-shadow: 2px 2px 4px black;
+}
+table {
+    border-collapse: collapse;
+}
+td, th {
+    border: 2px solid black; 
+}
