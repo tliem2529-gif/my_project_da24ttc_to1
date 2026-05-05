@@ -2,50 +2,27 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Thanh cong</title>
-<link rel="stylesheet" href="../css/style6.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang bán hàng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style6.css">
 </head>
 <body>
-<script>
-    const newdiv = document.createElement("div");
-    newdiv.setAttribute("class", "product-item");
+    <div class="container py-5">
+        <header class="text-center mb-5">
+            <p class="text-uppercase text-secondary mb-2"></p>
+            <h1 class="display-5 fw-bold">Đặc Sản Sóc Trăng</h1>
+            <p class="text-muted">Sản phẩm ngon và giá tốt.</p>
+        </header>
 
-    const statusTitle = document.createElement("h1");
-    statusTitle.textContent = "THÀNH CÔNG";
-    newdiv.appendChild(statusTitle);
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="product-list"></div>
+    </div>
 
-    const productName = document.createElement("h2");
-    productName.textContent = "Tên sản phẩm: Bánh Pía Sóc Trăng";
-    newdiv.appendChild(productName);
-
-    const productPrice = document.createElement("p");
-    productPrice.setAttribute("class", "price");
-    productPrice.textContent = "Giá: 99.000₫";
-    newdiv.appendChild(productPrice);
-
-    const productDetails = document.createElement("p");
-    productDetails.setAttribute("class", "details");
-    productDetails.textContent = "Chi tiết: Ảnh chất lượng cao, phù hợp để trang trí hoặc làm quà tặng.";
-    newdiv.appendChild(productDetails);
-
-    const newImg = document.createElement("img");
-    newImg.setAttribute("src", "../assets/images/banh.jpg");
-    newImg.setAttribute("alt", "Success Image");
-    newImg.setAttribute("width", "300");
-    newdiv.appendChild(newImg);
-
-    const buttonContainer = document.createElement("div");
-    buttonContainer.setAttribute("class", "button-container");
-
-    const buyButton = document.createElement("button");
-    buyButton.setAttribute("class", "btn buy-btn");
-    buyButton.textContent = "Mua ngay";
-    buttonContainer.appendChild(buyButton);
-
-    
-
-    newdiv.appendChild(buttonContainer);
-
-    document.body.appendChild(newdiv);
-</script>
+    <script src="../js/lib.js"></script>
+    <script>
+        productList.forEach(function(item) {
+            addProduct(item.id, item.name, item.price, item.image, item.productLink);
+        });
+    </script>
 </body>
+</html>
